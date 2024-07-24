@@ -1,0 +1,39 @@
+footer {
+  background-color: #FF8A08;
+  padding: 50px 0;
+  color: #fff;
+}
+footer img {
+  margin-bottom: 30px;
+  width: 152px;
+  height: 32px;
+}
+.pay img {
+  width: 300px;
+  height: 30px;
+}
+footer .img {
+  /* background-color: #e4853e; */
+  padding: 15px 20px;
+  border-radius: 5px;
+}
+footer .img i {
+  font-size: 20px;
+  margin: 5px;
+}
+footer .img span {
+  margin-top: 5px;
+}
+footer p {
+  font-size: 14px;
+  font-weight: 300;
+  /* opacity: 0.5; */
+  margin-bottom: 20px;
+}
+footer h2 {
+  margin-bottom: 20px;
+}
+footer li {
+  margin-bottom: 10px;
+  /* opacity: 0.5; */
+}
