@@ -4544,7 +4544,7 @@ fieldset:disabled .btn {
 
 .nav-pills {
     --vz-nav-pills-border-radius: 0.25rem;
-    --vz-nav-pills-link-active-color: #fff;
+    --vz-nav-pills-link-active-color: #e4853e;
     --vz-nav-pills-link-active-bg: #fff;
 }
 

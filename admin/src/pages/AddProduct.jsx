@@ -7,7 +7,13 @@ import { Editor } from "primereact/editor";
 import { Form } from "react-bootstrap";
 import "./Select.css";
 const AddProduct = () => {
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
+  const [formType, setFormType] = useState('basic');
+
+  const handleChange = (event) => {
+    setFormType(event.target.value);
+  };
+  // const [text, setText] = useState("");
   return (
     <div className="main-content">
       <div className="page-content">
@@ -19,7 +25,7 @@ const AddProduct = () => {
                 <Col sm={3}>
                   <Nav variant="pills" className="flex-column">
                     <Nav.Item>
-                      <Nav.Link eventKey="first" >General</Nav.Link>
+                      <Nav.Link eventKey="first">General</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="second">Inventory</Nav.Link>
@@ -69,13 +75,62 @@ const AddProduct = () => {
                           ))}
                         </Form.Control>
                       </Form.Group>
+                      <Form.Label>External Product</Form.Label>
+                      <div>
+                        <label>
+                          <input
+                            type="radio"
+                            value="basic"
+                            checked={formType === "basic"}
+                            onChange={handleChange}
+                          />
+                          Basic Form
+                        </label>
+                        <label>
+                          <input
+                            type="radio"
+                            value="advanced"
+                            checked={formType === "advanced"}
+                            onChange={handleChange}
+                          />
+                          Advanced Form
+                        </label>
+                      </div>
+                      <form>
+                        {formType === "basic" ? (
+                          <>
+                            <div>
+                              <label>Product Name:</label>
+                              <input type="text" name="productName" />
+                            </div>
+                            <div>
+                              <label>Price:</label>
+                              <input type="number" name="price" />
+                            </div>
+                          </>
+                        ) : (
+                          <>
+                            <div>
+                              <label>Product Description:</label>
+                              <textarea name="productDescription"></textarea>
+                            </div>
+                            <div>
+                              <label>SKU:</label>
+                              <input type="text" name="sku" />
+                            </div>
+                            <div>
+                              <label>Stock Quantity:</label>
+                              <input type="number" name="stockQuantity" />
+                            </div>
+                          </>
+                        )}
+                        <button type="submit">Add Product</button>
+                      </form>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="third">Setup tab content</Tab.Pane>
-                    <Tab.Pane eventKey="fourth">Images tab content</Tab.Pane>
-                    <Tab.Pane eventKey="fifth">SEO tab content</Tab.Pane>
-                    <Tab.Pane eventKey="sixth">
-                      Shipping & Tax tab content
-                    </Tab.Pane>
+                    <Tab.Pane eventKey="third">Setup</Tab.Pane>
+                    <Tab.Pane eventKey="fourth">Images </Tab.Pane>
+                    <Tab.Pane eventKey="fifth">SEO</Tab.Pane>
+                    <Tab.Pane eventKey="sixth">Shipping & Tax</Tab.Pane>
                     <Tab.Pane eventKey="seventh">Status tab content</Tab.Pane>
                   </Tab.Content>
                 </Col>

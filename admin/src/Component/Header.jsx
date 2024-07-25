@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import"./style.css"
+import { BsWindow } from "react-icons/bs";
+import { AiOutlineUnorderedList } from "react-icons/ai";
+import { SlWallet } from "react-icons/sl";
+import { RiArticleLine } from "react-icons/ri";
+import { RiCoupon2Line } from "react-icons/ri";
+import { RiStore3Line } from "react-icons/ri";
+import { RiContactsLine } from "react-icons/ri";
+import "./style.css";
 const Header = () => {
   const [userData, setUserData] = useState({});
 
@@ -242,11 +249,9 @@ const Header = () => {
                 </div>
               </div>
               <div className="col-auto">
-                <button type="button" className="addbtn" >
+                <button type="button" className="addbtn">
                   {/* <i className="ri-add-circle-line align-middle me-1" />{" "} */}
-                  <Link to="/AddProduct">
-                    Add Product
-                  </Link>
+                  <Link to="/AddProduct">Add Product</Link>
                 </button>
               </div>
               <div className="dropdown ms-1 topbar-head-dropdown header-item">
@@ -380,14 +385,7 @@ const Header = () => {
                   <div className="p-3 border-top-0 border-start-0 border-end-0 border-dashed border">
                     <div className="row align-items-center">
                       <div className="col">
-                        <h6 className="m-0 fw-semibold fs-15"> Web Apps </h6>
-                      </div>
-                      <div className="col-auto">
-                        <Link to="#!" className="btn btn-sm btn-soft-info">
-                          {" "}
-                          View All Apps
-                          <i className="ri-arrow-right-s-line align-middle" />
-                        </Link>
+                        <h6 className="m-0 fw-semibold fs-15"> Quick Links </h6>
                       </div>
                     </div>
                   </div>
@@ -395,25 +393,19 @@ const Header = () => {
                     <div className="row g-0">
                       <div className="col">
                         <Link className="dropdown-icon-item" to="#!">
-                          <img src="/images/brands/github.png" alt="Github" />
+                        <RiContactsLine />
                           <span>Add User</span>
                         </Link>
                       </div>
                       <div className="col">
                         <Link className="dropdown-icon-item" to="#!">
-                          <img
-                            src="/images/brands/bitbucket.png"
-                            alt="bitbucket"
-                          />
+                        <RiStore3Line />
                           <span>Add Product</span>
                         </Link>
                       </div>
                       <div className="col">
                         <Link className="dropdown-icon-item" to="#!">
-                          <img
-                            src="/images/brands/dribbble.png"
-                            alt="dribbble"
-                          />
+                        <RiCoupon2Line />
                           <span>Add Coupon</span>
                         </Link>
                       </div>
@@ -421,22 +413,20 @@ const Header = () => {
                     <div className="row g-0">
                       <div className="col">
                         <Link className="dropdown-icon-item" to="#!">
-                          <img src="/images/brands/dropbox.png" alt="dropbox" />
+                        <RiArticleLine />
                           <span>Add Page</span>
                         </Link>
                       </div>
                       <div className="col">
                         <Link className="dropdown-icon-item" to="#!">
-                          <img
-                            src="/images/brands/mail_chimp.png"
-                            alt="mail_chimp"
-                          />
+                    
+                          <AiOutlineUnorderedList />
                           <span>All Orders</span>
                         </Link>
                       </div>
                       <div className="col">
                         <Link className="dropdown-icon-item" to="#!">
-                          <img src="/images/brands/slack.png" alt="slack" />
+                          <BsWindow />
                           <span>Theme Setting</span>
                         </Link>
                       </div>
@@ -444,7 +434,7 @@ const Header = () => {
                       <div className="row g-0">
                         <div className="col">
                           <Link className="dropdown-icon-item" to="#!">
-                            <img src="/images/brands/slack.png" alt="slack" />
+                          <SlWallet />
                             <span>Wallet</span>
                           </Link>
                         </div>
@@ -453,7 +443,7 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-              <div className="dropdown topbar-head-dropdown ms-1 header-item">
+              {/* <div className="dropdown topbar-head-dropdown ms-1 header-item">
                 <button
                   type="button"
                   className="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
@@ -698,7 +688,7 @@ const Header = () => {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="ms-1 header-item d-none d-sm-flex">
                 <button
                   type="button"

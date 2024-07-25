@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { RiBox3Line } from "react-icons/ri";
+
 const Dashboard = () => {
   return (
     <>
@@ -7,7 +9,7 @@ const Dashboard = () => {
             <div className="container-fluid">
               <div className="row">
                 <div className="col-12">
-                  <div className="page-title-box d-sm-flex align-items-center justify-content-between">
+                  {/* <div className="page-title-box d-sm-flex align-items-center justify-content-between">
                     <h4 className="mb-sm-0">Dashboard</h4>
                     <div className="page-title-right">
                       <ol className="breadcrumb m-0">
@@ -17,14 +19,14 @@ const Dashboard = () => {
                         <li className="breadcrumb-item active">Dashboard</li>
                       </ol>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="row">
                 <div className="col">
                   <div className="h-100">
                     <div className="row mb-3 pb-1">
-                      <div className="col-12">
+                      {/* <div className="col-12">
                         <div className="d-flex align-items-lg-center flex-lg-row flex-column">
                           <div className="flex-grow-1">
                             <h4 className="fs-16 mb-1">Good Morning, Anna!</h4>
@@ -61,9 +63,9 @@ const Dashboard = () => {
                                 </div>
                               </div>
                             </form>
-                          </div> */}
+                          </div> 
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="row">
                       <div className="col-xl-3 col-md-6">
@@ -73,38 +75,38 @@ const Dashboard = () => {
                               <div className="flex-grow-1 overflow-hidden">
                                 <p className="text-uppercase fw-medium text-muted text-truncate mb-0">
                                   {" "}
-                                  Total Earnings
+                                  Total Revenue
                                 </p>
                               </div>
                               <div className="flex-shrink-0">
                                 <h5 className="text-success fs-14 mb-0">
-                                  <i className="ri-arrow-right-up-line fs-13 align-middle" />{" "}
-                                  +16.24 %
+                                  {/* <i className="ri-arrow-right-up-line fs-13 align-middle" />{" "}
+                                  +16.24 % */}
                                 </h5>
                               </div>
                             </div>
                             <div className="d-flex align-items-end justify-content-between mt-4">
                               <div>
                                 <h4 className="fs-22 fw-semibold ff-secondary mb-4">
-                                  $
+                                  Rs 
                                   <span
                                     className="counter-value"
                                     data-target="559.25"
                                   >
                                     0
                                   </span>
-                                  k{" "}
+                                
                                 </h4>
-                                <Link
+                                {/* <Link
                                   to="#"
                                   className="text-decoration-underline"
                                 >
                                   View net earnings
-                                </Link>
+                                </Link> */}
                               </div>
                               <div className="avatar-sm flex-shrink-0">
                                 <span className="avatar-title bg-soft-success rounded fs-3">
-                                  <i className="bx bx-dollar-circle text-success" />
+                                <i className="bx bx-wallet text-primary" />
                                 </span>
                               </div>
                             </div>
@@ -117,13 +119,13 @@ const Dashboard = () => {
                             <div className="d-flex align-items-center">
                               <div className="flex-grow-1 overflow-hidden">
                                 <p className="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                  Orders
+                                  Total Orders
                                 </p>
                               </div>
                               <div className="flex-shrink-0">
                                 <h5 className="text-danger fs-14 mb-0">
-                                  <i className="ri-arrow-right-down-line fs-13 align-middle" />{" "}
-                                  -3.57 %
+                                  {/* <i className="ri-arrow-right-down-line fs-13 align-middle" />{" "}
+                                  -3.57 % */}
                                 </h5>
                               </div>
                             </div>
@@ -137,12 +139,12 @@ const Dashboard = () => {
                                     0
                                   </span>
                                 </h4>
-                                <Link
+                                {/* <Link
                                   to="#"
                                   className="text-decoration-underline"
-                                >
+                                > 
                                   View all orders
-                                </Link>
+                                </Link>*/}
                               </div>
                               <div className="avatar-sm flex-shrink-0">
                                 <span className="avatar-title bg-soft-info rounded fs-3">
@@ -159,13 +161,13 @@ const Dashboard = () => {
                             <div className="d-flex align-items-center">
                               <div className="flex-grow-1 overflow-hidden">
                                 <p className="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                  Customers
+                                  Total Stores
                                 </p>
                               </div>
                               <div className="flex-shrink-0">
                                 <h5 className="text-success fs-14 mb-0">
-                                  <i className="ri-arrow-right-up-line fs-13 align-middle" />{" "}
-                                  +29.08 %
+                                  {/* <i className="ri-arrow-right-up-line fs-13 align-middle" />{" "} */}
+                                  {/* +29.08 % */}
                                 </h5>
                               </div>
                             </div>
@@ -178,18 +180,18 @@ const Dashboard = () => {
                                   >
                                     0
                                   </span>
-                                  M{" "}
+                                  
                                 </h4>
-                                <Link
+                                {/* <Link
                                   to="#"
                                   className="text-decoration-underline"
                                 >
                                   See details
-                                </Link>
+                                </Link> */}
                               </div>
                               <div className="avatar-sm flex-shrink-0">
-                                <span className="avatar-title bg-soft-warning rounded fs-3">
-                                  <i className="bx bx-user-circle text-warning" />
+                                <span className="avatar-title bg-warning rounded fs-3">
+                                <RiBox3Line />
                                 </span>
                               </div>
                             </div>
@@ -203,37 +205,31 @@ const Dashboard = () => {
                               <div className="flex-grow-1 overflow-hidden">
                                 <p className="text-uppercase fw-medium text-muted text-truncate mb-0">
                                   {" "}
-                                  My Balance
+                                  Total User
                                 </p>
                               </div>
                               <div className="flex-shrink-0">
-                                <h5 className="text-muted fs-14 mb-0">
-                                  +0.00 %
-                                </h5>
+                                
                               </div>
                             </div>
                             <div className="d-flex align-items-end justify-content-between mt-4">
                               <div>
                                 <h4 className="fs-22 fw-semibold ff-secondary mb-4">
-                                  $
+                                  
                                   <span
                                     className="counter-value"
                                     data-target="165.89"
                                   >
                                     0
                                   </span>
-                                  k{" "}
+                                
                                 </h4>
-                                <Link
-                                  to="#"
-                                  className="text-decoration-underline"
-                                >
-                                  Withdraw money
-                                </Link>
+                                
                               </div>
                               <div className="avatar-sm flex-shrink-0">
                                 <span className="avatar-title bg-soft-primary rounded fs-3">
-                                  <i className="bx bx-wallet text-primary" />
+                                <i className="bx bx-user-circle text-warning" />
+                                  
                                 </span>
                               </div>
                             </div>
