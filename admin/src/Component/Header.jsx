@@ -392,7 +392,7 @@ const Header = () => {
                   <div className="p-2">
                     <div className="row g-0">
                       <div className="col">
-                        <Link className="dropdown-icon-item" to="#!">
+                        <Link className="dropdown-icon-item" to="/user">
                         <RiContactsLine />
                           <span>Add User</span>
                         </Link>
@@ -1197,7 +1197,7 @@ const Header = () => {
                         {/* Use 'name' if that's what your backend provides */}
                       </span>
                       <span className="d-none d-xl-block ms-1 fs-12 text-muted user-name-sub-text">
-                        Founder
+                      {userData.type || "Default Type"}
                       </span>
                     </span>
                   </span>
