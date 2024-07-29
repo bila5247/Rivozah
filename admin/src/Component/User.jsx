@@ -1,18 +1,15 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const User = () => {
-  const [users, setUsers] = useState([
-    {
-      Name: "John",
-      Email: "john@gmail.com",
-      PhoneNo: "+293 213 234123",
-      Address: "New York",
-      Date: new Date().toISOString().split("T")[0], // Automatically set the current date
-      Type: "Editor",
-      Status: "Active",
-    },
-  ]);
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:3001')
+    .then(result => setUsers(result.data))
+    .catch(err => console.log(err))
+  })
   const handleStatusChange = (index) => {
     setUsers((prevUsers) => {
       const newUsers = [...prevUsers];
@@ -60,7 +57,12 @@ const User = () => {
                           {user.Status === "Active"
                             ? "Set Inactive"
                             : "Set Active"}
+
                         </button>
+                        <td>
+                        <Link to={`/Update-User/${user._id}`}className="btn btn-success">Update User</Link>
+                        <button>Delete</button>
+                        </td>
                       </td>
                     </tr>
                   ))}

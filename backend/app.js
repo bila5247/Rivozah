@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
+const UserModel = require('./models/Users')
 
 const JWT_SECRET = "madinachalkmadina12345678k4j9r9rw03003nmdfkrejeknmdskmfn43";
 
@@ -70,6 +71,27 @@ app.post("/admin", async (req, res) => {
     res.send({ status: "error", error: error.message });
   }
 });
+
+app.get('/User', (req,res) => {
+  UserModel.find({})
+  .then(users => res.json(users))
+  .catch(err => res.json(err))
+})
+
+app.get('/getUser/:id', (req,res) => {
+  const id = req.params.id;
+  UserModel.findById({id})
+  .then(users => res.json(users))
+  .catch(err => res.json(err))
+})
+
+
+app.post("/creatUser", (req,res) => {
+  UserModel.create(req.body)
+  .then(users => res.json(users))
+  .catch(err => res.json(err))
+})
+
 
 app.listen(3001, () => {
   console.log("Server is running on port 3001");
